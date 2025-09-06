@@ -5,14 +5,10 @@ import seaborn as sns
 
 os.system("cls")
 
-df_customers = pd.read_csv(
-    "C:\\Users\\smondal1\\OneDrive\\OneDrive - JLR\\Desktop\\zomato data\\Customers.csv")
-df_churn = pd.read_csv(
-    "C:\\Users\\smondal1\\OneDrive\\OneDrive - JLR\\Desktop\\zomato data\\Churn.csv")
-df_subscriptions = pd.read_csv(
-    "C:\\Users\\smondal1\\OneDrive\\OneDrive - JLR\\Desktop\\zomato data\\Subscriptions.csv")
-df_transactions = pd.read_csv(
-    "C:\\Users\\smondal1\\OneDrive\\OneDrive - JLR\\Desktop\\zomato data\\Transactions.csv")
+df_customers = pd.read_csv("Customers.csv")
+df_churn = pd.read_csv("Churn.csv")
+df_subscriptions = pd.read_csv("Subscriptions.csv")
+df_transactions = pd.read_csv("Transactions.csv")
 
 print(df_customers.shape)
 print(df_churn.shape)
@@ -22,7 +18,7 @@ print(df_transactions.shape)
 print(df_customers[["FirstName", "LastName"]])
 
 
-for index,row in df_customers.head(10).iterrows():
+for index, row in df_customers.head(10).iterrows():
     print(row["FirstName"])
 
 df_customers_from_northAmria = df_customers.loc[df_customers["Region"]
