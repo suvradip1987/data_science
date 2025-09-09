@@ -12,7 +12,9 @@ data = {
     "sex": ["F", "M", "M", "M", "F", "M", "F",None , "M", "F","M"]
 }
 
+
 df= pd.DataFrame(data)
+df.set_index('student_id', inplace=True)
 print(df.isnull())
 print(df.isnull().sum())
 print(df.dtypes)
