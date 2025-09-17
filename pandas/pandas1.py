@@ -16,6 +16,10 @@ data = {
 }
 
 df = pd.DataFrame(data)
+
+subset_data= df.loc[df["sex"] =="M",["student_id","student_name","student_age"]]
+print(subset_data)
+
 for item in df.loc[df["student_id"].isna()].index:
     df.loc[item,"student_id"] = random.randint(150,160)
 
